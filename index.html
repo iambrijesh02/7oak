@@ -996,14 +996,11 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
 
-    <!-- Modals -->
+
+  
     
-    <!-- Video Modal -->
+    <!-- Modal -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -1084,12 +1081,20 @@
     <i class="fas fa-phone-alt"></i>
   </a>
   <a href="https://wa.me/910123456789" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-whatsapp" style="font-size:1.4em;"></i>
   </a>
 </div>
 
 
-<script>setInterval(() => { if (!$('#investmentFormModal').hasClass('show')) $('#investmentFormModal').modal('show'); }, 3000);</script>
+<script>
+  // Only show if not already shown in this session
+  if (!sessionStorage.getItem('modalShown')) {
+    setTimeout(() => {
+      $('#investmentFormModal').modal('show');
+      sessionStorage.setItem('modalShown', 'true');
+    }, 3000);
+  }
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -18,6 +18,7 @@
   --gradient-secondary: linear-gradient(135deg, var(--primary-green), var(--primary-light-green));
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -382,48 +383,30 @@ body {
   height: 100%;
   background: rgb(26 26 26 / 43%);
 }
-
-.floating-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.floating-element {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: rgba(224, 64, 82, 0.1);
+.floating-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
+  background-color: #f7941d; /* example for call-btn */
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.floating-element.element-1 {
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
+.floating-buttons a.whatsapp-btn {
+  background-color: #25d366;
 }
 
-.floating-element.element-2 {
-  top: 60%;
-  right: 15%;
-  animation-delay: 2s;
+.floating-buttons i {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: middle;
 }
 
-.floating-element.element-3 {
-  bottom: 30%;
-  left: 20%;
-  animation-delay: 4s;
-}
-
-.floating-element.element-4 {
-  top: 40%;
-  right: 30%;
-  animation-delay: 1s;
-}
 
 @keyframes float {
   0%,
